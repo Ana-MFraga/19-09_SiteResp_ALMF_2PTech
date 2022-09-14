@@ -1,0 +1,31 @@
+:root{
+
+}
+
+body{
+     padding: 0;
+     margin: 0;
+}
+
+.navbar{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+
+     background-color: grey;
+}
+
+.nav_links ul {
+     display:flex;
+     margin: 0;
+     padding: 0;
+}
+.nav_links li{
+     list-style: none;
+}
+.nav_links a{
+     text-decoration: none;
+     display: block;
+     
+}
