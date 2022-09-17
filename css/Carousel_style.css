@@ -1,0 +1,53 @@
+.carousel{
+     width: 720px;
+     margin: auto;
+     position: relative;
+}
+
+img{
+     width: 100%; /* Como as imagens estão dentro do elemento 'carousel', o 100% será definido pelo elemento pai */
+}
+
+.prev, .next{
+     color: var(--font_l);
+     position: absolute; /* Como o 'carousel' está como relative, ele vai respeitar o elemento pai */
+     top: 50%;
+     width: auto;
+     padding: 10px;
+     transform: translate(0, -50%); /* Pra deixar centralizado */
+     /* Se baseia em linhas imaginárias, não no elemento pai, como o elemento está como absolute e com top 50%, usando o valor positivo vai alinhá-lo a linha imaginária do meio, que fica um pouco abaixo do 50%. Usando */
+     font-size: 25px;
+     font-weight: bold;
+     background-color: var(--bg_btt);
+     text-decoration: none;
+     transition: 0.3s;
+}
+
+.next{
+     right: 0;
+}
+
+.prev:hover, .next:hover{
+     transition: 0.3s;
+     background-color: var(--bg_btt_hover);
+}
+
+ /* Para economizar código, quando dois ou mais elementos tem algo em comum, faça tudo em um lugar só */
+.pag, .desc{
+     color: var(--font_l);
+     background-color: var(--bg_pag);
+     font-size: 18px;
+}
+
+.pag{
+     padding: 8px 14px;
+     position: absolute;
+     top: 0;
+}
+
+.desc{
+     position: absolute;
+     bottom: 30px;
+     width: 100%;
+     text-align: center;
+}

@@ -1,0 +1,19 @@
+@import url(Navbar_style.css);
+@import url(Carousel_style.css);
+
+:root {
+     --font_l: white;
+     --font_d: black;
+     --nav: grey;
+     --nav_hover: rgb(66, 66, 66);
+
+     --bg_btt: black;
+     --bg_pag: rgba(0, 0, 0, 0.336);
+     --bg_btt_hover: brown;
+}
+
+body {
+     padding: 0;
+     margin: 0;
+     font-size: 16px;
+}
