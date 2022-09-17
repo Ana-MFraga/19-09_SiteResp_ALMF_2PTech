@@ -1,19 +1,37 @@
 @import url(Navbar_style.css);
 @import url(Carousel_style.css);
 
-:root {
-     --font_l: white;
-     --font_d: black;
-     --nav: grey;
-     --nav_hover: rgb(66, 66, 66);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
-     --bg_btt: black;
+:root {
+     --font_l: #FFFFFF;
+     --font_d: #000000;
+     --yellow: #FFE045;
+     --nav: #ba0719;
+     --nav_hover: #870512;
+     --nav_active: #FF001B;
+
+     --bg_btt: #1C1715;
      --bg_pag: rgba(0, 0, 0, 0.336);
-     --bg_btt_hover: brown;
+     --bg_btt_hover: #ba0719;
+
+     --menu: #ba0719;
+     --menu-l: #C7232C;
+     --menu-d: #870512;
+     --menu-dd: #3B0208;
+
+     --bar: #FFFFFF;
+
+     --red: #FF001B;
 }
 
 body {
      padding: 0;
      margin: 0;
      font-size: 16px;
+     font-family: 'Roboto Slab', serif;
+
+     background-image: url("../img/pizza.jpg");
+     background-repeat: repeat;
+     background-size: 30rem;
 }

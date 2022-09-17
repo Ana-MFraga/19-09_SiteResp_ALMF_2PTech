@@ -5,7 +5,7 @@ getElementsByClassName("") > Guarda todos os elementos dentro dessa class dentro
 const navbar_btt = document.getElementsByClassName("nav_btt")[0]; //Pegando elemento botão
 
 //Pegando o navbar_links e navbar para colocar a classe 'active' depois
-const navbar_link = document.getElementsByClassName("navbar_links")[0];
+const navbar_link = document.getElementsByClassName("nav_links")[0];
 const navbar = document.getElementsByClassName("navbar")[0];
 
 //Verifica o tipo de evento e ativa ou desativa a classe 'active'
