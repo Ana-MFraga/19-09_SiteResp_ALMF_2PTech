@@ -10,13 +10,15 @@ img{
      width: 100%; /* Como as imagens estão dentro do elemento 'carousel', o 100% será definido pelo elemento pai */
 }
 
-d{
+d a{
+     color: var(--font_l);
      text-decoration: var(--yellow) underline double;
      cursor: pointer;
      font-style: italic; /* Deixar texto em itálico no css */
      transition: 0.2s;
 }
-d:hover{
+
+d a:hover{
      font-size: 1.3rem;
      transition: 0.2s;
 }
