@@ -89,7 +89,7 @@ d a:hover{
           padding: 0.8rem;
      }
 
-     d:hover{
+     d a:hover{
           font-size: 1.13rem;
      }
 
@@ -108,6 +108,10 @@ d a:hover{
 
      .prev, .next{
           padding: 0.3rem;
+     }
+
+     d a{
+          text-decoration: solid;
      }
 
      .pag, .desc{
