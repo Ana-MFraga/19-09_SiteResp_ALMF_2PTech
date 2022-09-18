@@ -12,6 +12,7 @@
      --nav_cont: #C7232C;
      --nav_hover: #870512;
      --nav_active: #FF001B;
+     --shadow: #000000;
 
      --bar: #FFFFFF;
      --yellow: #FFE045;
@@ -31,6 +32,8 @@
      --card_hover: #9f9f9f;
 
      --footer: #1c1715;
+     --footer_end: #332a26;
+     --footer_font: #FFFFFF;
 
      /* #1C1715 */
 }
@@ -48,9 +51,82 @@ body {
 
 footer{
      display: flex;
+
+     /* Deixa grudado no final*/
+     bottom: 0px;
+
      color: var(--font_l);
      background-color: var(--footer);
      margin-top: 1rem;
-     height: 40px;
+     height: max-content;
      width: 100%;
+     box-shadow: 0px 0px 10px var(--shadow);
+
+     align-content: center;
+     flex-flow: column wrap;
+}
+
+.sect {
+     display: flex;
+     flex-wrap: wrap;
+     box-sizing: border-box;
+     justify-content: center;
+     align-content: center;
+     margin: 0;
+     padding: 0;
+}
+
+.parag{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 2rem;
+     padding: 2rem;
+     margin: 0;
+}
+
+.parag #logend{
+     height: 100px;
+     padding-right: 2rem;
+}
+
+.parag .mid h1{
+     font-size: 1.2rem;
+     color: var(--footer_font);
+     padding-bottom: 1rem;
+}
+
+.parag .mid p{
+     cursor: pointer;
+}
+
+.parag .mid .link a{
+     text-decoration: none;
+     color: var(--footer_font);
+     font-weight: normal;
+}
+
+.parag .mid .link a:hover{
+     text-decoration: underline solid;
+}
+
+.parag .mid, .sect #end{
+     font-size: 1rem;
+     line-height: 0.5rem;
+}
+
+@media screen and (max-width: 426px){
+     .parag{
+          padding: 0.5rem 0;
+     }
+
+     .parag #logend{
+          height: 85px;
+     }
+     .parag .mid h1{
+          font-size: 0.85rem;
+          padding-bottom: 0.5rem;
+     }
+     .parag .mid, .sect #end{
+          font-size: 0.7rem;
+     }
 }
