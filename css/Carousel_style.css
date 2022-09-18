@@ -111,7 +111,7 @@ d a:hover{
      }
 
      d a{
-          text-decoration: solid;
+          text-decoration: underline solid;
      }
 
      .pag, .desc{
