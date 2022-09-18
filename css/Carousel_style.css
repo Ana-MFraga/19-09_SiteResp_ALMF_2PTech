@@ -1,24 +1,37 @@
 .carousel{
-     width: 720px;
+     width: 670px;
      margin: auto;
+     margin-top: 10px;
      position: relative;
+     overflow-x: hidden; /* Tirando o resto do desc que fica pra fora */
 }
 
 img{
      width: 100%; /* Como as imagens estão dentro do elemento 'carousel', o 100% será definido pelo elemento pai */
 }
 
+d{
+     text-decoration: var(--yellow) underline double;
+     cursor: pointer;
+     font-style: italic; /* Deixar texto em itálico no css */
+     transition: 0.2s;
+}
+d:hover{
+     font-size: 1.3rem;
+     transition: 0.2s;
+}
+
 .prev, .next{
-     color: var(--font_l);
+     color: var(--car);
      position: absolute; /* Como o 'carousel' está como relative, ele vai respeitar o elemento pai */
      top: 50%;
      width: auto;
-     padding: 10px;
+     padding: 0.5rem;
      transform: translate(0, -50%); /* Pra deixar centralizado */
      /* Se baseia em linhas imaginárias, não no elemento pai, como o elemento está como absolute e com top 50%, usando o valor positivo vai alinhá-lo a linha imaginária do meio, que fica um pouco abaixo do 50%. Usando */
-     font-size: 25px;
+     font-size: 1.5rem;
      font-weight: bold;
-     background-color: var(--bg_btt);
+     background-color: var(--car_btt);
      text-decoration: none;
      transition: 0.3s;
 }
@@ -29,25 +42,76 @@ img{
 
 .prev:hover, .next:hover{
      transition: 0.3s;
-     background-color: var(--bg_btt_hover);
+     background-color: var(--car_btt_hover);
 }
 
  /* Para economizar código, quando dois ou mais elementos tem algo em comum, faça tudo em um lugar só */
 .pag, .desc{
      color: var(--font_l);
-     background-color: var(--bg_pag);
-     font-size: 18px;
+     background-color: var(--car_pag);
+     font-size: 1.1rem;
 }
 
 .pag{
-     padding: 8px 14px;
+     padding: 0.5rem 0.9rem;
      position: absolute;
      top: 0;
 }
 
 .desc{
      position: absolute;
-     bottom: 30px;
+     bottom: 5px;
      width: 100%;
      text-align: center;
+     padding: 0.5rem;
+}
+
+@media screen and (max-width: 1025px){
+     .carousel{
+          width: 600px;
+     }
+
+     .prev, .next{
+          padding: 0.8rem;
+     }
+
+
+}
+
+@media screen and (max-width: 769px){
+     .carousel{
+          width: 530px;
+     }
+
+     .prev, .next{
+          padding: 0.8rem;
+     }
+
+     d:hover{
+          font-size: 1.13rem;
+     }
+
+     .pag, .desc{
+          font-size: 1rem;
+     }
+     .desc{
+          padding: 0.8rem;
+     }
+}
+
+@media screen and (max-width: 426px){
+     .carousel{
+          width: 300px;
+     }
+
+     .prev, .next{
+          padding: 0.3rem;
+     }
+
+     .pag, .desc{
+          font-size: 0.7rem;
+     }
+     .desc{
+          padding: 0.4rem;
+     }
 }

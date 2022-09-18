@@ -1,16 +1,17 @@
 .navbar {
+    box-sizing: border-box; /* Quando não se usa o box-sizing, o padding soma com a altura, porém quando utilizado, ele vai manter a altura em pixels*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-image: url("../img/topo.png");
     background-repeat: repeat;
-    background-size: 60px;
-    color: var(--font_l)
+    background-size: 5rem;
+    color: var(--font_l);
 }
 
 .logo{
     display: flex;
-    height: 80px;
+    height: 70px;
 }
 
 .nav_btt{
@@ -20,8 +21,8 @@
     right: 1rem; /* Posiciona o item na direita */
     flex-direction: column;
     justify-content: space-between;
-    width: 35px;
-    height: 25px;
+    width: 30px;
+    height: 23px;
 }
 .nav_btt .bar{
     height: 3px;
@@ -45,7 +46,7 @@
     color: var(--font_l);
     text-decoration: none;
     display: block;
-    padding: 1rem;
+    padding: 1.8rem;
     transition: 0.5s;
 }
 
@@ -53,14 +54,54 @@
     transition: 0.5s;
     background-color: var(--nav_hover);
     color: var(--yellow);
+    text-decoration: underline wavy;
+    /*
+    text-decoration > Estilização do sublinhado
+        Syntax:
+    text-decoration: none | color (se não especificado, fica como currentColor) | style(solid, double, dotted, dashed, wavy) | line (underline, overline, line-through)
+
+    -Style: solid > Linha sólida / double > Duas linhas / dotted > Linha pontilhada / dashed > Linha riscada / wavy > Linha fica ondulada
+    -Line: underline > Sublinhado em baixo / overline > Sublinhado acima / line-through > Sublinha o texto
+        * Pode-se usar mais de um ao mesmo tempo
+    */
 }
 .nav_links a:active{
     background-color: var(--nav_active);
 }
 
+.dropdown .drop_btt{
+    font-size: inherit;
+    border: none;
+    outline: none;
+    /* inherit > Pega do elemento pai */
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+
+.dropdown .drop_btt a:hover{
+    background: none;
+}
+.dropdown .drop_btt:hover{
+    background-color: var(--nav_hover);
+    transition: 0.5s;
+}
+
+.drop_content{
+    display: none;
+    position: absolute;
+    background-color: var(--nav_cont);
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown:hover .drop_content{
+    display: block;
+}
+
 @media screen and (max-width: 1025px){
     .nav_links{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         top: 70px;
     }
     .nav_links a:active{
@@ -133,6 +174,14 @@
         display:flex;
     }
 
+    .nav_links.active .drop_content{
+        position: relative;
+    }
+
+    .nav_links.active .dropdown .drop_btt{
+        width: 100%;
+    }
+
     /* Animação do X */
     #top, #bottom{ /* Colocando o ponto de origem da primeira e ultima linha como na esquerda */
         transform-origin: left;
@@ -144,14 +193,14 @@
     }
     .navbar.active .nav_btt #top{
         transition: 0.5s;
-        transform: rotate(38deg);
+        transform: rotate(41deg);
     }
     .navbar.active .nav_btt #bottom{
         transition: 0.5s;
-        transform: rotate(-38deg);
+        transform: rotate(-41deg);
     }
 }
 
-@media screen and (max-width: 325px){
+@media screen and (max-width: 426px){
 
 }

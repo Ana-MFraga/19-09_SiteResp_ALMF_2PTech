@@ -8,21 +8,24 @@
      --font_d: #000000;
      --yellow: #FFE045;
      --nav: #ba0719;
+     --nav_cont: #C7232C;
      --nav_hover: #870512;
      --nav_active: #FF001B;
 
-     --bg_btt: #1C1715;
-     --bg_pag: rgba(0, 0, 0, 0.336);
-     --bg_btt_hover: #ba0719;
+     --car: #FFE045;
+     --car_btt: #ba0719;
+     --car_pag: #1c1715d4;
+     --car_btt_hover: #870512;
 
-     --menu: #ba0719;
+     /* --menu: #ba0719;
      --menu-l: #C7232C;
      --menu-d: #870512;
-     --menu-dd: #3B0208;
+     --menu-dd: #3B0208; */
 
      --bar: #FFFFFF;
 
      --red: #FF001B;
+     /* #1C1715 */
 }
 
 body {
