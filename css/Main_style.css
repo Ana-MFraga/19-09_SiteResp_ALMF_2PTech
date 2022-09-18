@@ -1,16 +1,21 @@
 @import url(Navbar_style.css);
 @import url(Carousel_style.css);
+@import url(Card_style.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
 :root {
      --font_l: #FFFFFF;
      --font_d: #000000;
-     --yellow: #FFE045;
+     
      --nav: #ba0719;
      --nav_cont: #C7232C;
      --nav_hover: #870512;
      --nav_active: #FF001B;
+
+     --bar: #FFFFFF;
+     --yellow: #FFE045;
+     --red: #FF001B;
 
      --car: #FFE045;
      --car_btt: #ba0719;
@@ -22,9 +27,11 @@
      --menu-d: #870512;
      --menu-dd: #3B0208; */
 
-     --bar: #FFFFFF;
+     --card: #6c151dd0;
+     --card_hover: #9f9f9f;
 
-     --red: #FF001B;
+     --footer: #1c1715;
+
      /* #1C1715 */
 }
 
@@ -37,4 +44,13 @@ body {
      background-image: url("../img/pizza.jpg");
      background-repeat: repeat;
      background-size: 30rem;
+}
+
+footer{
+     display: flex;
+     color: var(--font_l);
+     background-color: var(--footer);
+     margin-top: 1rem;
+     height: 40px;
+     width: 100%;
 }

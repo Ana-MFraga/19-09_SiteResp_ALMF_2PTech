@@ -1,0 +1,78 @@
+.cardapio{
+     width: 100%;
+     display: flex;
+     box-sizing: border-box;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     background-color: var(--card);
+     margin: 1rem 0;
+     padding: 2rem 0;
+}
+
+.title{
+     color: var(--yellow);
+     font-weight: bolder;
+     font-size: 2rem;
+     font-style: italic;
+}
+
+hr{
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     border: 1px solid var(--yellow);
+}
+
+article{
+     display: flex;
+     padding: 2rem;
+     width: 90%;
+     height: max-content;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 3rem;
+}
+
+.card{
+     display: block;
+     /* background-color: var(--card_c); */
+     background-image: url("../img/paper.png");
+     background-repeat: no-repeat;
+     background-size: 20rem;
+     width: 100px;
+     height: 150px;
+     text-align: center;
+     justify-content: center;
+     transition: 0.5s;
+     font-size: 1.5rem;
+     padding: 1rem;
+}
+
+.card:hover{
+     cursor: pointer;
+     transition: 0.5s;
+     box-shadow: 9px 9px var(--card_hover);
+     /* box-shadow: none| *h-offset(-) *v-offset(|) blur spread *color;*/
+}
+
+
+@media screen and (max-width: 1025px){
+     .card{
+          width: 170px;
+          height: 200px;
+          background-size: 25rem;
+     }
+}
+
+@media screen and (max-width: 769px){
+
+}
+
+@media screen and (max-width: 426px){
+     .card{
+          width: 200px;
+          height: 200px;
+          background-size: 25rem;
+     }
+}

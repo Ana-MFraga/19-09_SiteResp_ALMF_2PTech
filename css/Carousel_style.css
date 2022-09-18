@@ -1,7 +1,7 @@
 .carousel{
-     width: 670px;
+     width: 700px;
      margin: auto;
-     margin-top: 10px;
+     margin-top: 1rem;
      position: relative;
      overflow-x: hidden; /* Tirando o resto do desc que fica pra fora */
 }
